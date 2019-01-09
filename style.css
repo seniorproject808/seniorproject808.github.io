@@ -1,0 +1,47 @@
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+    height: 50%;
+    margin: 0px 0px;
+    font-family: Arial;
+    
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.33%;
+    height: 30%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 60px 20px;
+}
+
+#Home {background-color: slategray; background-image: url(https://thechemco.com/wp-content/uploads/2016/03/fruitsveggies.jpeg); background-repeat: no-repeat; background-size: 1450px 400px; height: 580%}
+#Track {background-color: slategrey; background-image: url("https://i0.wp.com/lifeogy.com/ogl_uploads/2017/11/best-wood-for-cutting-boards.jpg?fit=625%2C417&ssl=1"); background-size:cover; height: 500%;}
+#Mobile {background-color: slategrey; height:350%;}
+
+#Centering {padding-top: 10px;
+            padding-right: 450px;
+            padding-bottom: 50px;
+            padding-left: 80px;}
+#Pictures {padding-right: 40px;}
+#Instructions {padding-top: 10px;
+                padding-right: 200px;
+                padding-bottom: 0px;
+                padding-left: 200px;}
+#Section {background-image: url(https://www.heartfoundation.org.nz/media/images/all-shared-sections/blogs/winter-food-habits_737_373_c1.jpg); background-size: cover; background-repeat: no-repeat;}

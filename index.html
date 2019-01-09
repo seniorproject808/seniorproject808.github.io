@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calorie Tracker</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <center><h1>
+            <h1 style="font-family:Arial;font-size:300%;color:black">
+                <u>Calorie Tracker</u>
+            </h1></center>
+        <script src="h.js"></script>
+        <button class="tablink" onclick="openPage('Home', this, 'slategray')">Home</button>
+        <button class="tablink" onclick="openPage('Track', this, 'slategrey')" id="defaultOpen">Track your Calories</button>
+        <button class="tablink" onclick="openPage('Mobile', this, 'slategrey')">Mobile Application</button>
+        
+        <div id="Home" class="tabcontent">
+            <br>
+            <br>
+                <font size="+3"><h3><center>Why count calories yourself when we could do it for you?</center></h3></font>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            <div id="Section">
+                <br>
+                <br>
+                    <p>
+                        <font size="+3"><center>How?</center></font>
+                    <br>
+                        <center><font size="+2">This website allows you to input how much calories and fats are in a food or drink.</font></center>
+                    </p>
+                    <br>
+                    <br>
+                <br>
+                    <p>
+                        <font size="+3"><center>Where to find them?</center></font>
+                    <br>
+                        <center><font size="+2">There are two options...</center>
+                    <center>
+                            (1) Locate the nutrition facts of the food or drink.
+                        <br>
+                            (2) Click on the mobile application tab and follow the instructions
+                    </p>
+                    </center>
+                    <center>
+                        <img src="http://nutritionfactsmaker.com/imgs/_e164b1ee-36ff-4828-833e-a9e9720010ad.jpg" width="180" height="360">
+                        <img src="picture1.png" width="180" height="360" hspace="20">
+                    </center>
+                    <br>
+                </div>
+                        </font>
+                    </p>
+        </div>
+        
+        <div id="Track" class="tabcontent">
+            <br>
+            <font size="+3"><h3 style="font-family:Arial;font-size:150%;color:white"><center>Instructions</h3></center></font>
+                    <p>
+                        <center><font size="+2">If you do not know the calories of a certain food you ate, click on Mobile Application to find out.</center></font>
+                        <br>
+                        <div id="Instructions">
+                        <center><font size="+2">Take a picture of the food or drink and manually enter the servicing size, calories, and fats. Press add another line to add more foods/drinks or delete line to remove a food/drink. When finished calculating all food/drink items, enter your gender and age to finish and calculate your calories and fats.</font>
+                        </div>
+                    </p>
+                    
+                    </script>
+                    <style>
+                        table {
+                            font-family: Arial, sans-serif;
+                            border-collapse: collapse;
+                            width: 60%;
+                        }
+                    
+                    td, th {
+                        border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;
+                    }
+                    
+                    tr:nth-child(even) {
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                    </style>
+                    <br /><br />
+                    <center><table id="tbl">
+                        <tr>
+                            <th><center>Food/Drink</center></th>
+                            <th><center>Serving Size</center></th>
+                            <th><center>Calories</center></th>
+                            <th><center>Fat (g)</center></th>
+                            <th></th>
+                            <th></th>
+                            <tr>
+                                <style>
+                                    input
+                                    {
+                                        text-align: center;
+                                    }
+                                </style>
+                                <td><center><input type="text" name="meals" style="text-align:center;"/></center></td>
+                                <td><center><input type="text" name="serving size" style="text-align:center;"/></center></td>
+                                <td><center><input onblur="findTotal()" type="text" name="calories" id="calories" style="text-align:center;"/></center></td>
+                                <td><center><input onblur="findTotalfats()"type="text" name="fats" style="text-align:center;"/></center></td>
+                                <td><input type="submit" class="button" value="Add another line" onclick="addField(this);" /></td>
+                                <td><input type="button" value="Delete Row" onclick="SomeDeleteRowFunction(this)"></td>
+                    </table></center>
+                    
+                    <script>
+                        function addField(n)
+                        {
+                            var tr = n.parentNode.parentNode.cloneNode(true);
+                            document.getElementById('tbl').appendChild(tr);
+                        }
+                    </script>
+                    <script>
+                        function SomeDeleteRowFunction(o) {
+                            //no clue what to put here?
+                            var p=o.parentNode.parentNode;
+                            p.parentNode.removeChild(p);
+                        }
+                    </script>
+                    
+                    <p>
+                        <br>
+                    <center>
+                        Total Calories: <input type="text" name="totalCalories" id="totalCalorie"/> 
+                    </center>
+                        <br>
+                    <center>
+                        Total Fat (g): <input type="text" name="totalFats" id="totalFat"/>
+                    </center>
+                        <br>
+                    <center>
+                        <script>
+                            function input(){
+                                var text = "You can consume at least 2000 calories and at most 2600 calories per day at the age of 13. Once you are 18 years old, you can consume at least 2400 calories and at most 3200 calories. The average amount of fat you can consume is around 44 to 78 grams.";
+                                document.forms.form1.area.value = text;
+                            }
+                        </script>
+                        <script>
+                            function input2(){
+                                var text = "You can consume at least 1600 calories and at most 2200 calories per day at the age of 13. Once you are 18 years old, you can consume at least 1800 calories and at most 2400 calories.The average amount of fat you can consume is around 44 to 78 grams.";
+                                document.forms.form1.area.value = text;
+                            }
+                        </script>
+                        <script>
+                            function input3(){
+                                var text = "You can consume at least 2600 calories and at most 3000 calories per day.The average amount of fat you can consume is around 44 to 78 grams.";
+                                document.forms.form1.area.value = text;
+                            }
+                        </script>
+                        <script>
+                            function input4(){
+                                var text = "You can consume at least 2000 calories and at most 2400 calories per day.The average amount of fat you can consume is around 44 to 78 grams.";
+                                document.forms.form1.area.value = text;
+                            }
+                        </script>
+                        <br>
+                        <form name='form1'>
+                                Gender and Age:
+                                            <input onclick='input()' type='button' value='Ages 13-18 Years Old Male' id='button'>
+                                            <input onclick='input2()' type='button' value='Ages 13-18 Years Old Female' id='button'>
+                                            <input onclick='input3()' type='button' value='Ages Over 18 Years Old Male' id='button'>
+                                            <input onclick='input4()' type='button' value='Ages Over 18 Years Old Female' id='button'>
+                                <br>
+                                    <textarea rows="5" cols="50" name='area'></textarea>
+                        </form>
+                    </center>
+                    </p>
+                    
+                    <script type="text/javascript">
+                        function findTotal(){
+                            var arr = document.getElementsByName('calories');
+                            var tot=0;
+                            for(var i=0;i<arr.length;i++){
+                                if(parseInt(arr[i].value))
+                                tot += parseInt(arr[i].value);
+                            }
+                            document.getElementById("totalCalorie").value = tot;
+                        }
+                    </script>
+                    
+                    <script type="text/javascript">
+                        function findTotalfats(){
+                            var arr = document.getElementsByName('fats');
+                            var tot=0;
+                            for(var i=0;i<arr.length;i++){
+                                if(parseInt(arr[i].value))
+                                tot += parseInt(arr[i].value);
+                            }
+                            document.getElementById("totalFat").value = tot;
+                        }
+                    </script>
+        </div>
+        
+        <div id="Mobile" class="tabcontent">
+            <center><font size="+3"><h3>Mobile Application</h3></font></center>
+            <font size="+2">
+                <div id="Pictures">
+                    <img src="picture2.png" width="180" height="360" align="right" hspace="20">
+                    <img src="picture1.png" width="180" height="360" align="right">
+                <div id="Centering">
+            <p>
+                Are you tired of looking up how many calories your food has? Do you want to find calories on a mobile application?
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                Click <a href="https://www.dropbox.com/s/8ms9jvp2wc1544n/app-debug.apk?dl=0">here</a> to download a mobile application that allows you to find how much calories are in foods by taking a picture.
+            </p>
+                </div>
+                <br>
+                <br>
+            <p>
+                [Instructions] Press the camera icon on the top right. Take a picture of the food item. Press the checkmark button. The results should appear similar to the photos above.
+            </p>
+            <p>
+                [Additional Steps] Input data into the Track your Calories tab and keep adding meals to find the total amount of calories and fats you've eaten a day.
+            </p>
+            </font>
+        </div>
+    </body>
+</html>
